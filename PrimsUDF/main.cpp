@@ -1,14 +1,15 @@
 #include <iostream>
 
 using namespace std;
-const int graphSize = 6;
+const int graphSize = 7;
 static int minCost = 0;
-int graph[graphSize][graphSize] = { {0,4,3,5,-1,-1},
-                        {4,0,6,-1,3,-1},
-                        {3,6,0,4,8,-1},
-                        {5,-1,4,0,5,6},
-                        {-1,3,8,5,0,7},
-                        {-1,-1,-1,6,7,0}
+int graph[graphSize][graphSize] = { {0,1,-1,4,-1,-1,-1},
+                        {1,0,2,6,4,-1,-1},
+                        {-1,2,0,-1,5,6,-1},
+                        {4,6,-1,0,3,-1,4},
+                        {-1,4,5,3,0,8,7},
+                        {-1,-1,6,-1,8,0,3},
+                        {-1,-1,-1,4,7,3,0}
                         };
     int edges[graphSize][graphSize] = {0};
     int selectedNode[graphSize] = {0,0,0,0,0,0};
