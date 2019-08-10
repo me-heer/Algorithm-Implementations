@@ -4,22 +4,18 @@ using namespace std;
 
 int main()
 {
-    int graphSize = 6;
-    int graph[graphSize][graphSize] = { {0,4,3,5,-1,-1},
-                        {4,0,6,-1,3,-1},
-                        {3,6,0,4,8,-1},
-                        {5,-1,4,0,5,6},
-                        {-1,3,8,5,0,7},
-                        {-1,-1,-1,6,7,0}
+    int graphSize = 4;
+    int graph[graphSize][graphSize] = { {0,4,1,3},
+                            {4,0,11,-1},
+                            {1,11,0,7},
+                            {3,-1,7,0}
                         };
-    int edges[graphSize][graphSize] = { (0,0,0,0,0,0),
-                        (0,0,0,0,0,0),
-                        (0,0,0,0,0,0),
-                        (0,0,0,0,0,0),
-                        (0,0,0,0,0,0),
-                        (0,0,0,0,0,0)
+    int edges[graphSize][graphSize] = { (0,0,0,0),
+                        (0,0,0,0),
+                        (0,0,0,0),
+                        (0,0,0,0)
                         };
-    int selectedNode[graphSize] = {0,0,0,0,0,0};
+    int selectedNode[graphSize] = {0,0,0,0};
     int totalSelectedNodes = 0;
     int currentNode;
     int min_edge,min_edge_index;
